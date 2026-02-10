@@ -1,9 +1,10 @@
 import Image from 'next/image';
-import { Twitter, Linkedin, Instagram, Mail } from 'lucide-react';
+import { Linkedin, Instagram, Mail } from 'lucide-react';
+import { XIcon } from '@/components/icons/XIcon';
 import Link from 'next/link';
 
 const socialLinks = [
-  { icon: Twitter, href: '#', label: 'Twitter' },
+  { icon: XIcon, href: '#', label: 'X (formerly Twitter)' },
   { icon: Linkedin, href: '#', label: 'LinkedIn' },
   { icon: Instagram, href: '#', label: 'Instagram' },
 ];
@@ -22,7 +23,7 @@ export function Footer() {
               height={48}
               className="rounded mb-4"
             />
-            <p className="text-sm text-gray-400 max-w-xs">
+            <p className="text-sm text-gray-300 max-w-xs">
               Empowering Africa through practical digital mastery. Building
               capability, confidence, and careers.
             </p>
@@ -33,24 +34,33 @@ export function Footer() {
             <h3 className="text-white font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#programs" className="hover:text-white transition-colors">
+                <Link
+                  href="/#programs"
+                  className="hover:text-white transition-colors"
+                >
                   Programs
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#our-story" className="hover:text-white transition-colors">
+                <Link
+                  href="/#our-story"
+                  className="hover:text-white transition-colors"
+                >
                   Our Story
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#values" className="hover:text-white transition-colors">
+                <Link href="/#values" className="hover:text-white transition-colors">
                   Our Values
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#waitlist" className="hover:text-white transition-colors">
+                <Link
+                  href="/#waitlist"
+                  className="hover:text-white transition-colors"
+                >
                   Join Waitlist
-                </a>
+                </Link>
               </li>
               <li>
                 <a
@@ -79,7 +89,7 @@ export function Footer() {
                   key={social.label}
                   href={social.href}
                   aria-label={social.label}
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-white transition-colors"
                 >
                   <social.icon size={20} />
                 </a>
@@ -89,7 +99,7 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-10 pt-8 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-500">
+        <div className="mt-10 pt-8 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-400">
           <p>
             &copy; {new Date().getFullYear()} Be&apos;er Technologies Ltd. All rights
             reserved.
