@@ -7,6 +7,9 @@
   --brand-blue-secondary: #3a6fd8;
   --brand-burgundy: #8b1a2b;
   --brand-burgundy-light: #a02035;
+  --warm-gray-50: #f5f3f0;
+  --warm-gray-100: #ebe8e3;
+  --warm-gray-200: #d6d2cc;
 }
 
 @theme inline {
@@ -16,7 +19,11 @@
   --color-brand-blue-secondary: var(--brand-blue-secondary);
   --color-brand-burgundy: var(--brand-burgundy);
   --color-brand-burgundy-light: var(--brand-burgundy-light);
+  --color-warm-gray-50: var(--warm-gray-50);
+  --color-warm-gray-100: var(--warm-gray-100);
+  --color-warm-gray-200: var(--warm-gray-200);
   --font-sans: var(--font-inter);
+  --font-display: var(--font-display);
   --font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
 }
 
@@ -55,7 +62,6 @@ body {
   .animate-float-slow,
   .animate-float-medium,
   .animate-float-diagonal {
-    -webkit-animation: none;
     animation: none;
   }
 }
@@ -85,15 +91,6 @@ body {
 }
 
 /* Hero floating shape animations */
-@-webkit-keyframes float-slow {
-  0%,
-  100% {
-    transform: translateY(0) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-20px) rotate(3deg);
-  }
-}
 @keyframes float-slow {
   0%,
   100% {
@@ -101,19 +98,6 @@ body {
   }
   50% {
     transform: translateY(-20px) rotate(3deg);
-  }
-}
-
-@-webkit-keyframes float-medium {
-  0%,
-  100% {
-    transform: translateY(0) rotate(0deg);
-  }
-  33% {
-    transform: translateY(-15px) rotate(-2deg);
-  }
-  66% {
-    transform: translateY(10px) rotate(2deg);
   }
 }
 
@@ -127,22 +111,6 @@ body {
   }
   66% {
     transform: translateY(10px) rotate(2deg);
-  }
-}
-
-@-webkit-keyframes float-diagonal {
-  0%,
-  100% {
-    transform: translate(0, 0) rotate(0deg);
-  }
-  25% {
-    transform: translate(10px, -15px) rotate(5deg);
-  }
-  50% {
-    transform: translate(-5px, -25px) rotate(-3deg);
-  }
-  75% {
-    transform: translate(-15px, -10px) rotate(2deg);
   }
 }
 
@@ -163,16 +131,16 @@ body {
 }
 
 .animate-float-slow {
-  -webkit-animation: float-slow 20s ease-in-out infinite;
   animation: float-slow 20s ease-in-out infinite;
+  will-change: transform;
 }
 
 .animate-float-medium {
-  -webkit-animation: float-medium 15s ease-in-out infinite;
   animation: float-medium 15s ease-in-out infinite;
+  will-change: transform;
 }
 
 .animate-float-diagonal {
-  -webkit-animation: float-diagonal 25s ease-in-out infinite;
   animation: float-diagonal 25s ease-in-out infinite;
+  will-change: transform;
 }
