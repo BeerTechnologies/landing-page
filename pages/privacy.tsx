@@ -13,7 +13,7 @@ function SectionCard({
   children: React.ReactNode;
 }) {
   return (
-    <section className="bg-white rounded-xl p-6 md:p-8 shadow-sm border border-gray-100 border-l-4 border-l-brand-blue">
+    <section className="bg-white rounded-xl p-6 md:p-8 shadow-sm border border-warm-gray-100 border-l-4 border-l-brand-blue">
       <div className="flex items-center gap-3 mb-4">
         <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-brand-blue text-white text-xs font-bold shrink-0">
           {number}
@@ -53,14 +53,14 @@ export default function Privacy() {
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-white/10 mb-6">
               <Shield size={32} className="text-white" />
             </div>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4 tracking-tight">
               Privacy Policy
             </h1>
-            <p className="text-white/70 text-sm md:text-base">
+            <p className="text-white/90 text-sm md:text-base">
               Last updated: 10th February 2026
             </p>
-            <p className="text-white/80 text-base md:text-lg mt-3 max-w-xl mx-auto">
-              How we collect, use, and protect your data at Be&apos;er Technologies.
+            <p className="text-white/90 text-base md:text-lg mt-3 max-w-xl mx-auto">
+              How we collect, use, and protect your data at Be&apos;er Technologies
             </p>
           </div>
         </div>
@@ -83,7 +83,7 @@ export default function Privacy() {
                 When you submit our waitlist form, we collect the following personal
                 information:
               </p>
-              <ul className="space-y-2.5">
+              <ul role="list" className="space-y-2.5">
                 <ListItem>
                   <strong>Full Name</strong> — to identify you and personalize
                   communications.
@@ -108,7 +108,7 @@ export default function Privacy() {
               <p className="mb-3">
                 We use the information you provide for the following purposes:
               </p>
-              <ul className="space-y-2.5">
+              <ul role="list" className="space-y-2.5">
                 <ListItem>
                   To notify you when enrollment opens for your chosen program.
                 </ListItem>
@@ -143,11 +143,11 @@ export default function Privacy() {
                   <ExternalLink size={14} />
                 </a>
                 , a third-party form handling service. When you submit the waitlist
-                form, your data is transmitted to and temporarily stored by Formspree
-                before being forwarded to us. Formspree processes your data in
-                accordance with their own privacy policy. We do not share your
-                personal information with any other third parties for marketing or
-                commercial purposes.
+                form, your data is transmitted to and stored by Formspree&apos;s
+                servers, then forwarded to us via email. Formspree retains
+                submission data in accordance with their privacy policy. We do not
+                share your personal information with any other third parties for
+                marketing or commercial purposes.
               </p>
             </SectionCard>
 
@@ -176,7 +176,7 @@ export default function Privacy() {
                 Depending on your location, you may have the following rights
                 regarding your personal data:
               </p>
-              <ul className="space-y-2.5">
+              <ul role="list" className="space-y-2.5">
                 <ListItem>
                   <strong>Access</strong> — request a copy of the personal data we
                   hold about you.
@@ -231,10 +231,10 @@ export default function Privacy() {
             <SectionCard number={11} title="Contact Us">
               <p>
                 If you have any questions, concerns, or requests regarding this
-                Privacy Policy or the handling of your personal data, please
-                contact us at:
+                Privacy Policy or the handling of your personal data, please contact
+                us at:
               </p>
-              <div className="mt-4 bg-gray-50 rounded-lg p-4 text-sm">
+              <div className="mt-4 bg-warm-gray-50 rounded-lg p-4 text-sm">
                 <p className="font-semibold text-gray-900 mb-1">
                   Be&apos;er Technologies Ltd.
                 </p>
@@ -251,10 +251,7 @@ export default function Privacy() {
 
           {/* Back to home */}
           <div className="mt-12">
-            <Link
-              href="/"
-              className="text-brand-blue font-medium hover:underline"
-            >
+            <Link href="/" className="text-brand-blue font-medium hover:underline">
               &larr; Back to home
             </Link>
           </div>
