@@ -14,7 +14,9 @@ export function ProgramCard({ program, isExpanded, onToggle }: ProgramCardProps)
     <div
       className={`group relative rounded-xl border bg-white transition-all duration-300 ${
         program.isKids
-          ? 'border-brand-burgundy border-2'
+          ? isExpanded
+            ? 'border-brand-burgundy border-2 shadow-lg shadow-brand-burgundy/5'
+            : 'border-brand-burgundy border-2 shadow-sm hover:shadow-md'
           : isExpanded
             ? 'border-brand-blue/40 shadow-lg shadow-brand-blue/5'
             : 'border-gray-200 shadow-sm hover:shadow-md'
@@ -23,7 +25,11 @@ export function ProgramCard({ program, isExpanded, onToggle }: ProgramCardProps)
       {/* Expanded accent bar */}
       <div
         className={`absolute left-0 top-4 bottom-4 w-1 rounded-full transition-all duration-300 ${
-          isExpanded ? 'bg-brand-blue opacity-100' : 'bg-transparent opacity-0'
+          isExpanded
+            ? program.isKids
+              ? 'bg-brand-burgundy opacity-100'
+              : 'bg-brand-blue opacity-100'
+            : 'bg-transparent opacity-0'
         }`}
       />
 
@@ -39,19 +45,19 @@ export function ProgramCard({ program, isExpanded, onToggle }: ProgramCardProps)
         type="button"
         onClick={onToggle}
         aria-expanded={isExpanded ? 'true' : 'false'}
-        className="w-full flex items-start justify-between p-6 text-left cursor-pointer"
+        className={`w-full flex items-start justify-between ${program.isKids ? 'pt-12 px-6 pb-6' : 'p-6'} text-left cursor-pointer`}
       >
         <div className="flex items-start gap-4 pr-4">
           <div
             className={`shrink-0 w-12 h-12 rounded-lg flex items-center justify-center transition-all duration-300 ${
               isExpanded
-                ? 'bg-brand-blue'
-                : 'bg-brand-blue/10 group-hover:bg-brand-blue/15'
+                ? program.isKids ? 'bg-brand-burgundy' : 'bg-brand-blue'
+                : program.isKids ? 'bg-brand-burgundy/10 group-hover:bg-brand-burgundy/15' : 'bg-brand-blue/10 group-hover:bg-brand-blue/15'
             }`}
           >
             <Icon
               className={`transition-colors duration-300 ${
-                isExpanded ? 'text-white' : 'text-brand-blue'
+                isExpanded ? 'text-white' : program.isKids ? 'text-brand-burgundy' : 'text-brand-blue'
               }`}
               size={24}
             />
@@ -63,7 +69,7 @@ export function ProgramCard({ program, isExpanded, onToggle }: ProgramCardProps)
         </div>
         <ChevronDown
           className={`shrink-0 mt-1 text-gray-400 transition-transform duration-300 ${
-            isExpanded ? 'rotate-180 text-brand-blue' : ''
+            isExpanded ? `rotate-180 ${program.isKids ? 'text-brand-burgundy' : 'text-brand-blue'}` : ''
           }`}
           size={20}
         />
@@ -78,7 +84,9 @@ export function ProgramCard({ program, isExpanded, onToggle }: ProgramCardProps)
           <div className="px-6 pb-6 pt-3 border-t border-gray-100">
             <div className="space-y-4 text-sm">
               <div className="flex flex-wrap gap-3">
-                <span className="inline-flex items-center gap-1.5 bg-brand-blue/5 text-brand-blue px-3 py-1.5 rounded-full text-xs font-medium">
+                <span className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium ${
+                  program.isKids ? 'bg-brand-burgundy/5 text-brand-burgundy' : 'bg-brand-blue/5 text-brand-blue'
+                }`}>
                   {program.duration}
                 </span>
                 <span className="inline-flex items-center gap-1.5 bg-gray-100 text-gray-700 px-3 py-1.5 rounded-full text-xs font-medium">

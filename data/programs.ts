@@ -23,7 +23,7 @@ export interface Program {
 export const programs: Program[] = [
   {
     id: 'full-stack',
-    title: 'Full Stack Web Development',
+    title: 'Full Stack Development',
     description:
       'Master both frontend and backend technologies to build complete web applications.',
     icon: Code2,
@@ -38,8 +38,8 @@ export const programs: Program[] = [
     isKids: false,
   },
   {
-    id: 'frontend-react',
-    title: 'Frontend with React',
+    id: 'frontend',
+    title: 'Frontend Development',
     description:
       'Specialize in building modern, interactive user interfaces with React and its ecosystem.',
     icon: Monitor,
@@ -59,7 +59,7 @@ export const programs: Program[] = [
     description:
       'Learn to build cross-platform mobile applications for iOS and Android.',
     icon: Smartphone,
-    duration: '14 weeks',
+    duration: '16 weeks',
     prerequisites: 'Basic programming knowledge',
     outcomes: [
       'Cross-platform mobile apps',
@@ -75,7 +75,7 @@ export const programs: Program[] = [
     description:
       'Transform raw data into actionable insights using modern analytics tools and techniques.',
     icon: BarChart3,
-    duration: '10 weeks',
+    duration: '12 weeks',
     prerequisites: 'Basic computer literacy',
     outcomes: [
       'Data visualization',

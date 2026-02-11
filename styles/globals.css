@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 
 :root {
-  --background: ##f8f4ef;
+  --background: #f8f4ef;
   --foreground: #171717;
   --brand-blue: #0056d2;
   --brand-blue-secondary: #3a6fd8;
@@ -16,8 +16,8 @@
   --color-brand-blue-secondary: var(--brand-blue-secondary);
   --color-brand-burgundy: var(--brand-burgundy);
   --color-brand-burgundy-light: var(--brand-burgundy-light);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter);
+  --font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
 }
 
 html {
@@ -56,6 +56,30 @@ body {
   .animate-float-medium,
   .animate-float-diagonal {
     -webkit-animation: none;
+    animation: none;
+  }
+}
+
+/* Hero text entrance animations */
+@keyframes hero-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-hero-fade-up {
+  opacity: 0;
+  animation: hero-fade-up 0.6s ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-hero-fade-up {
+    opacity: 1;
     animation: none;
   }
 }

@@ -153,17 +153,36 @@ export function HeroSection() {
       {/* Content */}
       <div className="relative z-10 text-center px-4 md:px-6 max-w-4xl mx-auto">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-          Empowering Africa Through Digital Mastery
+          {['Empowering', 'Africa', 'Through', 'Digital', 'Mastery'].map(
+            (word, i) => (
+              <span
+                key={word}
+                className="inline-block animate-hero-fade-up"
+                style={{ animationDelay: `${0.1 + i * 0.12}s` }}
+              >
+                {word}
+                {i < 4 && <>&nbsp;</>}
+              </span>
+            )
+          )}
         </h1>
-        <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10">
+        <p
+          className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10 animate-hero-fade-up"
+          style={{ animationDelay: '0.75s' }}
+        >
           Be&apos;er Technologies is an African EdTech company committed to
           empowering individuals, organizations, and communities through practical
           digital mastery. We exist to bridge the gap between learning and
           employability — at scale.
         </p>
-        <Button variant="outline" size="lg" href="#waitlist">
-          Join the Waitlist
-        </Button>
+        <div
+          className="animate-hero-fade-up"
+          style={{ animationDelay: '1s' }}
+        >
+          <Button variant="outline" size="lg" href="#waitlist">
+            Join the Waitlist
+          </Button>
+        </div>
       </div>
     </section>
   );
