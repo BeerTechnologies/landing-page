@@ -80,11 +80,11 @@ export function Footer() {
           <div>
             <h3 className="text-white font-semibold mb-4">Connect</h3>
             <a
-              href="mailto:hello@beertech.com"
+              href="mailto:info@beeredtech.com"
               className="inline-flex items-center gap-2 text-sm hover:text-white transition-colors mb-4 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
             >
               <Mail size={16} />
-              hello@beertech.com
+              info@beeredtech.com
             </a>
             <div className="flex items-center gap-4 mt-2">
               {socialLinks.map((social) => (

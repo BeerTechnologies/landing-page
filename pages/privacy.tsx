@@ -144,10 +144,10 @@ export default function Privacy() {
                 </a>
                 , a third-party form handling service. When you submit the waitlist
                 form, your data is transmitted to and stored by Formspree&apos;s
-                servers, then forwarded to us via email. Formspree retains
-                submission data in accordance with their privacy policy. We do not
-                share your personal information with any other third parties for
-                marketing or commercial purposes.
+                servers, then forwarded to us via email. Formspree retains submission
+                data in accordance with their privacy policy. We do not share your
+                personal information with any other third parties for marketing or
+                commercial purposes.
               </p>
             </SectionCard>
 
@@ -239,11 +239,11 @@ export default function Privacy() {
                   Be&apos;er Technologies Ltd.
                 </p>
                 <a
-                  href="mailto:hello@beertech.com"
+                  href="mailto:info@beeredtech.com"
                   className="inline-flex items-center gap-2 text-brand-blue hover:underline font-medium"
                 >
                   <Mail size={16} />
-                  hello@beertech.com
+                  info@beeredtech.com
                 </a>
               </div>
             </SectionCard>
