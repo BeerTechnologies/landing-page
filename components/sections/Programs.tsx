@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 import { programs } from '@/data/programs';
 import { SectionWrapper } from '@/components/ui/SectionWrapper';

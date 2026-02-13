@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import { useForm, ValidationError } from '@formspree/react';
 import { CheckCircle, Shield, Mail } from 'lucide-react';

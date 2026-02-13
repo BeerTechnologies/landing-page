@@ -46,14 +46,6 @@ We welcome:
 - UI/UX Design
 - Product Design
 
-### Security & Emerging Tech
-
-- Cybersecurity
-- Detached / Specialized Topics:
-  - Internet of Things (IoT)
-  - Software Development Life Cycle (SDLC)
-  - Object-Oriented Programming (OOP)
-
 > 📈 **Our course offerings continue to expand as the hub grows.**
 
 ---
